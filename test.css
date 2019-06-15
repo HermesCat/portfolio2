@@ -1,0 +1,188 @@
+:root {
+    --ubuntu: 'Ubuntu', sans-serif;
+    --istok:    'Istok Web', sans-serif;
+    --background-gradient: linear-gradient(to right, #dadbdd, #e0e2e7);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url(img/clouds-heaven-skyscape-479821.jpg);
+  background-size: cover;
+  font-family: var(--ubuntu);
+}
+
+#page-wrapper {
+    min-height: 95%;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 2px;
+    height: 35px; /* Footer height */
+    border-top: 10px solid;
+    height: 5%;
+    overflow: auto;
+    background-image: var(--background-gradient);
+}
+
+header{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    background-image: var(--background-gradient);
+    width: 100%;
+    border-bottom: 10px solid;
+}
+#nav-bar {
+ margin: 0 auto;
+}
+
+
+.nav-link {
+    font-family: var(--ubuntu);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(82, 78, 78);
+}
+
+.nav-link:hover {
+    color: #333366;
+}
+
+.showcase-heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+#skills {
+   margin: 0 auto;
+   margin-bottom: 15px;
+   font-family: var(--istok);
+}
+
+.showcase ul {
+    margin: 3px;
+}
+
+#profile-pic {
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#portfolio-btn {
+    text-decoration: none;
+    background: #333366;
+    color: white;
+    margin: 0 auto;
+    padding: 13px;
+    border-radius: 1em;
+    margin-bottom: 10px;
+}
+
+#portfolio-btn:hover {
+   opacity: .8;
+}
+
+.highlighter {
+    background-image: url(img/clouds-heaven-skyscape-479821.jpg) ;
+    background-size: 100px 100px;
+    border-radius: .5em; 
+    padding: 8px;
+    color: white;
+}
+
+#homepage {
+    margin: 0 auto;
+    position: relative;
+    max-width: 700px;
+    border-radius: 20px;
+    animation-name: fall;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+    0% {top: -400px; opacity: 0;}
+    100% {top: 0; opacity: 1;}
+}
+
+.active {
+    color: black;
+}
+
+#portfolio {
+    margin: 0 auto;
+    position: relative;
+    max-width: 700px;
+    border-radius: 20px;
+    animation-name: fall;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    padding-top: 10px;
+    
+}
+
+@keyframes fall {
+    0% {top: -400px; opacity: 0;}
+    100% {top: 0; opacity: 1;}
+}
+
+.portfolio-item {
+    decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.portfolio-item-image {
+    max-height: 150px;
+    max-width: 150px;
+    position: relative;
+    border-radius: 1em;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.portfolio-card {
+    min-height: 330px;
+}
+
+.btn {
+    background: #333366;
+    color: white;
+    font-weight: bold;
+}
+
+#contact {
+    margin: 0 auto;
+    position: relative;
+    max-width: 700px;
+    border-radius: 20px;
+    animation-name: fall;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    padding-top: 10px;
+    
+}
+
+@keyframes fall {
+    0% {top: -400px; opacity: 0;}
+    100% {top: 0; opacity: 1;}
+}
+
+.contact-container {
+    margin-left: 100px;
+}
