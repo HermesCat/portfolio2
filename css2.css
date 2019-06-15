@@ -1,0 +1,97 @@
+/* slanted hero */
+@white-9: #eeeeee;
+
+.slanted-carousel {
+  position: relative;
+
+  /*
+    How it works
+    The main tricks are to place two divs (or elements of your choice) on top
+    of each other. The first div requires a wrapper element, but the second
+    does not. The wrapper is skewed at the angle you desire, and the child div
+    is skewed back so that the content isn’t slanted. The child is then set to
+    a width smaller that the first div and the overflow is hidden.
+  
+   Credit to http://generatedcontent.org/post/26407228072/split-feature 
+  */
+
+  .slider {
+    /* set initial width */
+    width: 700px;
+
+    /* hide the content that overflows (to allow second box to show through) */
+    overflow: hidden;
+    display: inline-block;
+
+    /* skew container so that it has angled edge, and set up transition */
+    transform: skewX(-20deg);
+    transition: width 1.2s ease-in-out;
+
+    /* give negative margin to remove gap caused by left hand skew */
+    margin-left: -76px;
+    border-right: 10px solid ghostwhite;
+
+    /* hide pointer events for unseen content */
+    pointer-events: none;
+
+    /* make first box bigger on hover, and smaller when hover second box */
+    &:hover {
+      width: 850px;
+    }
+  }
+
+  .caption {
+    width: 30%;
+    top: 9%;
+    bottom: 10px;
+    z-index: 1000;
+    padding-top: 10px;
+    position: absolute;
+    text-shadow: none;
+  }
+
+  /* set the size of the boxes and any decoration */
+  .box {
+    width: 1200px;
+    height: 450px;
+    // border-radius: .5em;
+  }
+
+  .carousel-left {
+    /* skew back by negative of parent’s skew so contents is upright */
+    transform: skewX(20deg);
+
+    background: @white-9 url(http://via.placeholder.com/1200x450) no-repeat;
+    margin-left: 76px; /* give margin to push content away from left slanted edge */
+    pointer-events: auto;	/* allow pointer events for the box */
+
+    .left-caption {
+      left: 12%;
+    }
+  }
+
+  .carousel-right {
+    background: @white-9 url(http://via.placeholder.com/1200x450) no-repeat;
+    position: absolute; 	/* remove from flow so sunset is placed on top */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+
+    .right-caption {
+      right: 3%;
+      top: 40%;
+    }
+  }
+
+  .carousel-right:hover + .slider {
+     width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slanted-carousel {
+
+    .caption {
+      right: 20%;
+      padding-bottom: 30px;
+    }
+  }
+}

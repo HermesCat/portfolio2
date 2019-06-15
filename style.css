@@ -1,0 +1,116 @@
+:root {
+  --split-color: linear-gradient(#f7f768, #fafa86);
+  --split-element-color: #ffff99;
+  --istok: 'Istok Web', sans-serif;
+  --nobile: 'Nobile', sans-serif;
+  --ubuntu: 'Ubuntu Condensed', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: #f7f7ec;
+  color: black;
+}
+
+#page-wrapper {
+  min-height: 95%;
+  width: 100%;
+  padding-bottom: 10px;
+  font-family: var(--Ubuntu);
+}
+
+
+
+#splits {
+  z-index: 2;
+}
+
+.split.left {
+  background-image: var(--split-color);
+  position: absolute;
+  height: 100%;
+  width: 35%;
+  top: 100;
+  overflow: hidden;
+  white-space: nowrap; 
+
+}
+.split.right {
+  background-image: var(--split-color);
+  position: absolute;
+  height: 100%;
+  width: 10%;
+  top: 100;
+  right: 0;
+  overflow: hidden;
+  white-space: nowrap; 
+
+}
+
+h1 {
+  z-index: 3;
+}
+
+h3{
+  z-index: 3;
+}
+
+.page-contents {
+  z-index: 3;
+ }
+
+#skills-container {
+  z-index: 3;
+  position: absolute;
+  margin-left: 40%;
+  margin-right: 20px;
+  top: 40%;
+  width: 55%;
+}
+
+p {
+  z-index: 3;
+}
+
+.footer {
+  color: black;
+  padding: 2px;
+  margin-left: 30px;
+  height: 35px; /* Footer height */
+  z-index: 3;
+  position: absolute;
+  overflow: hidden;
+  bottom: 0%;
+}
+
+.main-title {
+  margin-top: 35px;
+  margin-left: 10px;
+  font-size: 70px;
+}
+
+.highlighter {
+  color: var(--split-element-color);
+  background-color: black;
+  border: 15px solid black;
+  border-radius: .5em;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-family: var(--istok);
+  font-weight: bolder;
+  font-size: 30px;
+  margin-top: 75px;
+}
+
+.nav-link:hover {
+  color: rgb(85, 81, 81);
+}
